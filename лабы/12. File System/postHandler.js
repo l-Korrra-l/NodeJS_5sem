@@ -28,14 +28,14 @@ module.exports = (request, response) => {
                             errHandler(request, response, e.code, e.message);
                         }
                         else {
-                            console.log('Добавлен студент');
+                            console.log('added');
                             response.writeHead(200, {'Content-Type': 'application/json; charset=utf-8'});
                             response.end(JSON.stringify(JSON.parse(body)));
                         }
                     });
                 }
                 else {
-                    errHandler(request, response, 2, `Студент с id  ${JSON.parse(body).id} не существует`);
+                    errHandler(request, response, 2, `Sudent id  ${JSON.parse(body).id} doesnt exist`);
                 }
             });
     }
@@ -57,8 +57,8 @@ module.exports = (request, response) => {
                 errHandler(request, response, err.code, err.message);
             }
             else {
-                console.log('Копия была создана');
-                response.end('Копия была создана');
+                console.log('copy');
+                response.end('copy');
             }
         });
     }

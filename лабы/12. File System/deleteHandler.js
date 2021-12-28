@@ -25,7 +25,7 @@ module.exports = (request, response) => {
                 }
             }
             if (!flag) {
-                errorHandler(request, response, 3, 'Нет файлов');
+                errorHandler(request, response, 3, 'Error');
             }
         });
     }
@@ -40,7 +40,7 @@ module.exports = (request, response) => {
                 fileJSON = fileJSON.filter(function(x) {
                     return x !== null;
                 });
-                console.log('Студент удален');
+                console.log('del');
             }
         }
         if(!response.hasHeader('Content-Type')) {
