@@ -1,3 +1,6 @@
+select *from FACULTY
+select *from pulpit
+delete from pulpit where pulpit like 'test'
 -- DROP TABLE FACULTY
 CREATE TABLE FACULTY
   (
@@ -8,7 +11,7 @@ CREATE TABLE FACULTY
      
 delete FACULTY;
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-             values  ('ИДиП',   'Издателькое дело и полиграфия');
+             values  ('MY',   'Издателькое дело и полиграфия');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
             values  ('ХТиТ',   'Химическая технология и техника');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )

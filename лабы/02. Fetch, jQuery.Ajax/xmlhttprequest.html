@@ -8,7 +8,20 @@
 <script>
     let elem = document.getElementById('resp');
     let r = new XMLHttpRequest();
-    r.open('GET', 'http://localhost:5000/api/name', false);
+    r.open('GET', 'http://localhost:5000/api/name', true);
+    r.onload = function (e) {
+        if (r.readyState === 4) {
+          if (r.status === 200) {
+            elem.append(r.responseText);
+            console.log(r.responseText);
+          } else {
+            console.error(r.statusText);
+          }
+        }
+      };
+      r.onerror = function (e) {
+        console.error(r.statusText);
+      };
     r.send();
     if(r.status == 200)
     {
